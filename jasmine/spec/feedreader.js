@@ -91,8 +91,8 @@ $(function() {
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          */
-         it('should loadFeed and print the .entry and .feed container', function(){
-           expect($('.feed').has('entry').length).not.toBe(0);
+         it('should loadFeed and print the entry and .feed container', function(){
+           expect($('.feed').has('.entry').length).not.toBe(0);
          });
        });
 
