@@ -32,9 +32,9 @@ $(function() {
          * and that the URL is not empty.
          */
          it('should have feed url defined and not empty', function(){
-           for(var i=0, len=allFeeds.length; i<len; i++){
-             expect(allFeeds[i].name).toBeDefined();
-             expect(allFeeds[i].name.length).not.toBe(0);
+           for (feed of allFeeds) {
+             expect(feed.url).toBeDefined();
+             expect(feed.url.length).not.toBe(0);
            }
          })
 
@@ -44,9 +44,9 @@ $(function() {
          * and that the name is not empty.
          */
          it('should have name defined and not empty', function(){
-           for(var i=0, len=allFeeds.length; i<len; i++){
-             expect(allFeeds[i].name).toBeDefined();
-             expect(allFeeds[i].name.length).not.toBe(0);
+           for (feed of allFeeds) {
+             expect(feed.name).toBeDefined();
+             expect(feed.name.length).not.toBe(0);
            }
          });
     });
@@ -92,7 +92,7 @@ $(function() {
          * a single .entry element within the .feed container.
          */
          it('should loadFeed and print the entry and .feed container', function(){
-           expect($('.feed').has('.entry').length).not.toBe(0);
+           expect($('.feed .entry').length).not.toBe(0);
          });
        });
 
